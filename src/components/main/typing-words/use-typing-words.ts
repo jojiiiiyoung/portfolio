@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-const useTypingWords = (words: string[]) => {
+const useTypingWords = (words: string[]): { current: number[] } => {
   const [current, setCurrent] = useState<number[]>([0, 0]);
 
   useEffect(() => {
@@ -17,12 +17,12 @@ const useTypingWords = (words: string[]) => {
       words[current[0]].length - 1 === current[1] ? 2000 : 100
     );
 
-    return () => {
+    return (): void => {
       clearTimeout(timer);
     };
-  }, [current]);
+  }, [current, words]);
 
   return { current };
-}
+};
 
 export default useTypingWords;

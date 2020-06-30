@@ -1,13 +1,14 @@
-import React from 'react';
-import useTypingWords from './use-typing-words';
+/* eslint-disable  */
+import React from "react";
+import useTypingWords from "./use-typing-words";
 
-import './style.css'
+import "./style.css";
 
 interface IProps {
   words: string[];
 }
 
-const TypingWords = ({ words }: IProps) => {
+const TypingWords = ({ words }: IProps): React.ReactElement => {
   const { current } = useTypingWords(words);
 
   return (
@@ -18,7 +19,14 @@ const TypingWords = ({ words }: IProps) => {
             {Array.prototype.map.call(word, (letter: string, lIdx: number) => (
               <span
                 key={`${wIdx}_${lIdx}_${letter}`}
-                className={`letter ${wIdx !== current[0] ? 'out' : wIdx === current[0] && lIdx <= current[1] ? 'in' : 'ended'}`}>
+                className={`letter ${
+                  wIdx !== current[0]
+                    ? "out"
+                    : wIdx === current[0] && lIdx <= current[1]
+                    ? "in"
+                    : "ended"
+                }`}
+              >
                 {letter}
               </span>
             ))}
