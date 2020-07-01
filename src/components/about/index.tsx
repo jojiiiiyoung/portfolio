@@ -10,27 +10,84 @@ const About = (): React.ReactElement => {
           <h3 className="section-title">About</h3>
           <div className="section-title-divider" />
           <div className="section-description">
-            <p>skills</p>
-            <ul className="skill-list">
-              <li className="btn-pill">
-                <span>typescript</span>
-              </li>
-              <li className="btn-pill">
-                <span>javascript</span>
-              </li>
-              <li className="btn-pill">
-                <span>react</span>
-              </li>
-              <li className="btn-pill">
-                <span>redux</span>
-              </li>
-              <li className="btn-pill">
-                <span>html</span>
-              </li>
-              <li className="btn-pill">
-                <span>css</span>
-              </li>
-            </ul>
+            <div className="box">
+              <div className="icon">
+                <i className="ion-ios-analytics-outline" />
+              </div>
+              <h4 className="title">
+                <span>SK Planet Co.</span>
+              </h4>
+              <div className="description">
+                <span className="period">2018.06 - 현재</span>
+                <br />
+                Web(PC, mobile) front-end 개발
+                <ul className="skill-list">
+                  <li className="btn-pill">
+                    <span>typescript</span>
+                  </li>
+                  <li className="btn-pill">
+                    <span>react</span>
+                  </li>
+                  <li className="btn-pill">
+                    <span>redux</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="box">
+              <div className="icon">
+                <i className="ion-ios-analytics-outline" />
+              </div>
+              <h4 className="title">
+                <span>Vingle Co. </span>
+              </h4>
+              <div className="description">
+                <span className="period">2018.01 - 2018.06</span>
+                <br />
+                Web(PC, mobile) front-end 개발
+                <ul className="skill-list">
+                  <li className="btn-pill">
+                    <span>typescript</span>
+                  </li>
+                  <li className="btn-pill">
+                    <span>React</span>
+                  </li>
+                  <li className="btn-pill">
+                    <span>Redux</span>
+                  </li>
+                  <li className="btn-pill">
+                    <span>SSR</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="box">
+              <div className="icon">
+                <i className="ion-ios-analytics-outline" />
+              </div>
+              <h4 className="title">
+                <span>Tmax soft Co.</span>
+              </h4>
+              <div className="description">
+                <span className="period">2015.02 - 2017.11</span>
+                <br />
+                Enterprise용 UI platform, framework 설계 및 개발
+                <ul className="skill-list">
+                  <li className="btn-pill">
+                    <span>javascript</span>
+                  </li>
+                  <li className="btn-pill">
+                    <span>java</span>
+                  </li>
+                  <li className="btn-pill">
+                    <span>C#</span>
+                  </li>
+                  <li className="btn-pill">
+                    <span>android</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -46,7 +46,7 @@
 .btn-pill {
   position: relative;
   margin: 0 0.5rem 0.5rem 0;
-  padding: 0.3rem 1.3rem;
+  padding: 0 1rem;
   outline: none;
   text-decoration: none;
   display: flex;
@@ -60,7 +60,7 @@
 }
 .btn-pill span {
   color: #164ca7;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.7px;
 }
@@ -135,9 +135,54 @@
   transform: translate(50%, 0) scale(1.1);
 }
 
-.skill-list {
+#about .skill-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+#about .section-description {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+#about .box {
+  margin: 1rem 0.5rem;
+  flex: 1 1 0;
+}
+
+#about .title {
+  margin-left: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+}
+#about .title span {
+  position: relative;
+}
+
+#about .title span::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  background-image: url("./building.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#about .description {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+#about .period {
+  color: #aaa;
 }
