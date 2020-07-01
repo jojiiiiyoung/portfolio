@@ -1,9 +1,10 @@
 import React from "react";
 import { IMAGE_URL, DEFAULT_LOGO as logo } from "../../constants";
 
-import TypingWords from "./typing-words";
-
 import "./style.css";
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const RotatingText = require("react-rotating-text");
 
 const Main = (): React.ReactElement => {
   return (
@@ -11,7 +12,7 @@ const Main = (): React.ReactElement => {
       id="main"
       style={{ backgroundImage: `url(${IMAGE_URL}home-bg.jpg)` }}
     >
-      <div className="main-container">
+      <div className="main-container container">
         <div className="wow fadeIn">
           <div className="main-logo">
             <img className="" src={logo} alt="smile :)" />
@@ -22,16 +23,16 @@ const Main = (): React.ReactElement => {
           <h1>Hello, my name is Jiyoung</h1>
           <h2>
             I am{" "}
-            <TypingWords
-              words={["Frontend Developer", "working in SK planet."]}
+            <RotatingText
+              items={["Frontend Developer", "working in SK planet."]}
             />
           </h2>
           <div className="actions">
             <a href="#about" className="btn-get-started">
               About
             </a>
-            <a href="#services" className="btn-services">
-              Projects
+            <a href="#portfolio" className="btn-services">
+              Portfolio
             </a>
           </div>
         </div>

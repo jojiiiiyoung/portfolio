@@ -1,0 +1,67 @@
+#portfolio {
+  background: #f6f6f6;
+}
+
+#portfolio .project-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#portfolio .portfolio-item {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: table;
+  overflow: hidden;
+  margin: 1.5rem;
+  background-color: yellow;
+}
+
+#portfolio .portfolio-item .bg-source {
+  right: 1rem;
+  bottom: 1rem;
+  color: #fff;
+}
+
+#portfolio .portfolio-item .details {
+  height: 20rem;
+  width: 20rem;
+  background: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  opacity: 0;
+  transition: 0.3s;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+#portfolio .portfolio-item .details h4 {
+  font-size: 1.6rem;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translate3d(0, -15px, 0);
+  font-weight: 700;
+  color: #333333;
+}
+
+#portfolio .portfolio-item .details span {
+  display: block;
+  color: #666666;
+  font-size: 1rem;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translate3d(0, 15px, 0);
+}
+
+#portfolio .portfolio-item:hover .details {
+  opacity: 0.8;
+}
+
+#portfolio .portfolio-item:hover .details h4 {
+  transform: translate3d(0, 0, 0);
+}
+
+#portfolio .portfolio-item:hover .details span {
+  transform: translate3d(0, 0, 0);
+}

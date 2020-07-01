@@ -21,7 +21,7 @@
 }
 
 #main .main-container {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.8);
   display: table-cell;
   margin: 0;
   padding: 0;
@@ -78,8 +78,8 @@
 }
 
 #main .btn-get-started {
-  background: #03C4EB;
-  border: 2px solid #03C4EB;
+  background: #03c4eb;
+  border: 2px solid #03c4eb;
   color: #fff;
 }
 
@@ -95,12 +95,6 @@
 }
 
 #main .btn-services:hover {
-  background: #03C4EB;
-  border: 2px solid #03C4EB;
-}
-
-.bg-source {
-  position: absolute;
-  bottom: 3rem;
-  right: 3rem;
+  background: #03c4eb;
+  border: 2px solid #03c4eb;
 }
