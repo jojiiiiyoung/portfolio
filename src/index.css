@@ -36,6 +36,7 @@ p {
 
 ul {
   padding: 0;
+  list-style: none;
 }
 
 h1,
@@ -73,8 +74,8 @@ h6 {
 
 .bg-source {
   position: absolute;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .container {

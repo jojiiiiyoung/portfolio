@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./style.css";
+import Badge from "../common/badge";
 
 const About = (): React.ReactElement => {
   return (
@@ -22,14 +23,14 @@ const About = (): React.ReactElement => {
                 <br />
                 Web(PC, mobile) front-end 개발
                 <ul className="skill-list">
-                  <li className="btn-pill">
-                    <span>typescript</span>
+                  <li>
+                    <Badge text="typescript" />
                   </li>
-                  <li className="btn-pill">
-                    <span>react</span>
+                  <li>
+                    <Badge text="react" />
                   </li>
-                  <li className="btn-pill">
-                    <span>redux</span>
+                  <li>
+                    <Badge text="redux" />
                   </li>
                 </ul>
               </div>
@@ -46,17 +47,17 @@ const About = (): React.ReactElement => {
                 <br />
                 Web(PC, mobile) front-end 개발
                 <ul className="skill-list">
-                  <li className="btn-pill">
-                    <span>typescript</span>
+                  <li>
+                    <Badge text="typescript" />
                   </li>
-                  <li className="btn-pill">
-                    <span>React</span>
+                  <li>
+                    <Badge text="React" />
                   </li>
-                  <li className="btn-pill">
-                    <span>Redux</span>
+                  <li>
+                    <Badge text="Redux" />
                   </li>
-                  <li className="btn-pill">
-                    <span>SSR</span>
+                  <li>
+                    <Badge text="SSR" />
                   </li>
                 </ul>
               </div>
@@ -73,17 +74,17 @@ const About = (): React.ReactElement => {
                 <br />
                 Enterprise용 UI platform, framework 설계 및 개발
                 <ul className="skill-list">
-                  <li className="btn-pill">
-                    <span>javascript</span>
+                  <li>
+                    <Badge text="javascript" />
                   </li>
-                  <li className="btn-pill">
-                    <span>java</span>
+                  <li>
+                    <Badge text="java" />
                   </li>
-                  <li className="btn-pill">
-                    <span>C#</span>
+                  <li>
+                    <Badge text="C#" />
                   </li>
-                  <li className="btn-pill">
-                    <span>android</span>
+                  <li>
+                    <Badge text="android" />
                   </li>
                 </ul>
               </div>
