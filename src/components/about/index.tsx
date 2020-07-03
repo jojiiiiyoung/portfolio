@@ -93,18 +93,16 @@ const About = (): React.ReactElement => {
         </div>
 
         <div className="about-container">
-          <div className="about-img">
-            <span className="bg-source">
-              Photo by{" "}
-              <a href="https://unsplash.com/@ewan121?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                Ewan Robertson
-              </a>{" "}
-              on{" "}
-              <a href="https://unsplash.com/s/photos/yak-shaver?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                Unsplash
-              </a>
-            </span>
-          </div>
+          <span className="bg-source">
+            Photo by{" "}
+            <a href="https://unsplash.com/@ewan121?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+              Ewan Robertson
+            </a>{" "}
+            on{" "}
+            <a href="https://unsplash.com/s/photos/yak-shaver?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+              Unsplash
+            </a>
+          </span>
 
           <div className="about-content">
             <h2 className="about-title">

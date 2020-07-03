@@ -3,33 +3,23 @@
 }
 
 #about .container {
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
 }
 
-#about .about-img {
+#about .about-container {
   position: relative;
-  width: 100%;
-  height: 17rem;
-  object-fit: cover;
-  padding-bottom: 2rem;
+  background-size: cover;
+  background-position: bottom center;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("./about-img.jpg") fixed center center;
-  background-size: cover;
-}
-
-@media (max-width: 768px) {
-  #about .about-img img {
-    margin-left: 0;
-  }
 }
 
 #about .about-content {
-  background: #fff;
-  padding: 3rem;
+  padding: 5rem;
 }
 
 #about .about-title {
-  color: #666;
+  color: #ddd;
   font-weight: 700;
   font-size: 1.8rem;
 }
@@ -37,6 +27,7 @@
 #about .about-text {
   line-height: 2rem;
   margin-bottom: 1.5rem;
+  color: #aaa;
 }
 
 #about .about-text:last-child {
@@ -53,7 +44,7 @@
 #about .section-description {
   display: flex;
   flex-wrap: wrap;
-  padding: 3rem;
+  padding: 6rem 3rem;
   margin: 0 auto;
 }
 
