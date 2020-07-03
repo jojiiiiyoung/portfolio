@@ -10,14 +10,9 @@
 }
 
 #portfolio .portfolio-item {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  display: table;
-  overflow: hidden;
-  margin: 1.5rem;
-  background-color: yellow;
+  width: 18rem;
+  height: 27rem;
+  margin: 1.5rem 0.5rem;
 }
 
 #portfolio .portfolio-item .bg-source {
@@ -26,42 +21,54 @@
   color: #fff;
 }
 
-#portfolio .portfolio-item .details {
-  height: 20rem;
-  width: 20rem;
-  background: #fff;
-  display: table-cell;
-  vertical-align: middle;
-  opacity: 0;
-  transition: 0.3s;
-  text-align: center;
-  padding: 0 1.5rem;
+#portfolio .portfolio-item h5 {
+  color: rgb(30, 31, 41);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-#portfolio .portfolio-item .details h4 {
-  font-size: 1.6rem;
-  transition: transform 0.3s, opacity 0.3s;
-  transform: translate3d(0, -15px, 0);
-  font-weight: 700;
-  color: #333333;
+#portfolio .portfolio-item p {
+  margin-bottom: 1.5rem;
 }
 
-#portfolio .portfolio-item .details span {
+#portfolio .portfolio-item .description {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+#portfolio .portfolio-item .keywords {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-shadow: rgba(23, 23, 23, 0.03) 0px 8px 29px 0px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0px;
+  overflow-wrap: break-word;
+  background-color: rgb(255, 255, 255);
+  background-clip: border-box;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card .card-img {
   display: block;
-  color: #666666;
-  font-size: 1rem;
-  transition: transform 0.3s, opacity 0.3s;
-  transform: translate3d(0, 15px, 0);
+  width: 100%;
+  height: 12rem;
 }
 
-#portfolio .portfolio-item:hover .details {
-  opacity: 0.8;
+.card .card-body {
+  padding: 2rem;
+  height: 100%;
 }
 
-#portfolio .portfolio-item:hover .details h4 {
-  transform: translate3d(0, 0, 0);
-}
-
-#portfolio .portfolio-item:hover .details span {
-  transform: translate3d(0, 0, 0);
+.card .card-body .card-text {
+  line-height: 1.4;
+  margin-top: 0.8rem;
 }

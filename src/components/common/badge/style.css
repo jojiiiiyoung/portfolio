@@ -1,7 +1,6 @@
 .btn-pill {
   position: relative;
   margin: 0 0.5rem 0.5rem 0;
-  padding: 0 1rem;
   outline: none;
   text-decoration: none;
   display: flex;
@@ -13,6 +12,16 @@
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
+
+.btn-pill.small {
+  padding: 0 0.5rem;
+}
+
+.btn-pill.medium {
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
 .btn-pill span {
   color: #164ca7;
   font-size: 0.8rem;
