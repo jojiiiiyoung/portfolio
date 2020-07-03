@@ -17,14 +17,19 @@
     font-size: 2.6rem;
   }
   #header #logo img {
-    max-height: 2rem;
+    max-height: 1.5rem;
   }
 }
 
-.is-sticky #header {
-  background: rgba(0, 0, 0, 0.85);
+.is-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* this is optional and should be different for every project */
 }
 
+#header.is-sticky {
+  background: rgba(0, 0, 0, 0.85);
+}
 #header .nav-container {
   vertical-align: middle;
 }
