@@ -1,94 +1,80 @@
-import React from "react";
+import React, { useRef } from "react";
 
-import "./style.css";
+// components
 import Badge from "../common/badge";
 
+// hooks
+import useVisible from "../common/useVisible";
+
+import "./style.css";
+
+interface ICompany {
+  name: string;
+  skills: string[];
+  period: string;
+  job: string;
+}
+
+const COMPANIES: ICompany[] = [
+  {
+    name: "SK Planet Co.",
+    skills: ["typescript", "react", "redux", "node", "webpack"],
+    period: "2018.06 - 현재",
+    job: "Web(PC, mobile) front-end 개발",
+  },
+  {
+    name: "Vingle Co.",
+    skills: ["typescript", "react", "redux", "SSR"],
+    period: "2018.01 - 2018.06",
+    job: "vingle.net(PC, mobile) front-end 개발",
+  },
+  {
+    name: "Tmax soft Co.",
+    skills: ["javascript", "java", "android", "WPF", "c#"],
+    period: "2015.02 - 2017.11",
+    job: "Enterprise용 UI platform, framework 설계 및 개발",
+  },
+];
+
 const About = (): React.ReactElement => {
+  const containerEl = useRef<HTMLDivElement | null>(null);
+
+  const { visible } = useVisible(containerEl);
+
   return (
-    <section id="about">
+    <section id="about" ref={containerEl}>
       <div className="container">
         <div>
           <h3 className="section-title">About</h3>
           <div className="section-title-divider" />
           <div className="section-description">
-            <div className="box">
-              <div className="icon">
-                <i className="ion-ios-analytics-outline" />
+            {COMPANIES.map((company, index) => (
+              <div
+                key={index}
+                className={`box slide ${
+                  visible ? `delay-${index} slide-up` : "slide-down"
+                }`}
+              >
+                <div className="icon">
+                  <i className="ion-ios-analytics-outline" />
+                </div>
+                <h4 className="title">
+                  <span>{company.name}</span>
+                </h4>
+                <div className="description">
+                  <span className="period">{company.period}</span>
+                  <br />
+
+                  <ul className="skill-list">
+                    {company.skills.map((skill) => (
+                      <li key={skill}>
+                        <Badge text={skill} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <h4 className="title">
-                <span>SK Planet Co.</span>
-              </h4>
-              <div className="description">
-                <span className="period">2018.06 - 현재</span>
-                <br />
-                Web(PC, mobile) front-end 개발
-                <ul className="skill-list">
-                  <li>
-                    <Badge text="typescript" />
-                  </li>
-                  <li>
-                    <Badge text="react" />
-                  </li>
-                  <li>
-                    <Badge text="redux" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="box">
-              <div className="icon">
-                <i className="ion-ios-analytics-outline" />
-              </div>
-              <h4 className="title">
-                <span>Vingle Co. </span>
-              </h4>
-              <div className="description">
-                <span className="period">2018.01 - 2018.06</span>
-                <br />
-                Web(PC, mobile) front-end 개발
-                <ul className="skill-list">
-                  <li>
-                    <Badge text="typescript" />
-                  </li>
-                  <li>
-                    <Badge text="React" />
-                  </li>
-                  <li>
-                    <Badge text="Redux" />
-                  </li>
-                  <li>
-                    <Badge text="SSR" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="box">
-              <div className="icon">
-                <i className="ion-ios-analytics-outline" />
-              </div>
-              <h4 className="title">
-                <span>Tmax soft Co.</span>
-              </h4>
-              <div className="description">
-                <span className="period">2015.02 - 2017.11</span>
-                <br />
-                Enterprise용 UI platform, framework 설계 및 개발
-                <ul className="skill-list">
-                  <li>
-                    <Badge text="javascript" />
-                  </li>
-                  <li>
-                    <Badge text="java" />
-                  </li>
-                  <li>
-                    <Badge text="C#" />
-                  </li>
-                  <li>
-                    <Badge text="android" />
-                  </li>
-                </ul>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

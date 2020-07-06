@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import "./style.css";
 import { IMAGE_URL } from "../../constants";
 import Badge from "../common/badge";
+import useVisible from "../common/useVisible";
 
 const projects: IProject[] = [
   {
@@ -68,8 +69,11 @@ const projects: IProject[] = [
 ];
 
 const Projects = (): React.ReactElement => {
+  const containerEl = useRef<HTMLDivElement | null>(null);
+  const { visible } = useVisible(containerEl);
+
   return (
-    <section id="portfolio">
+    <section id="portfolio" ref={containerEl}>
       <div className="container">
         <div>
           <h3 className="section-title">Portfolio</h3>
@@ -77,8 +81,14 @@ const Projects = (): React.ReactElement => {
         </div>
 
         <ul className="project-list">
-          {projects.map((project) => (
-            <ProjectItem key={project.name} data={project} />
+          {projects.map((project, index) => (
+            <ProjectItem
+              key={project.name}
+              data={project}
+              className={`slide ${
+                visible ? `delay-${index} slide-up` : "slide-down"
+              }`}
+            />
           ))}
         </ul>
       </div>
@@ -99,8 +109,14 @@ interface IProject {
   keywords?: string[];
 }
 
-const ProjectItem = ({ data }: { data: IProject }): React.ReactElement => (
-  <li className="card portfolio-item">
+const ProjectItem = ({
+  data,
+  className,
+}: {
+  data: IProject;
+  className: string;
+}): React.ReactElement => (
+  <li className={`card portfolio-item ${className}`}>
     <img className="card-img" src={IMAGE_URL + data.img.src} alt="" />
     <div className="card-body">
       <h5>{data.name}</h5>
