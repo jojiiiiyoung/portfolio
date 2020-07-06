@@ -1,25 +1,37 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 
 import { DEFAULT_LOGO as logo } from "../../constants";
 
 import "./style.css";
 
+const menu: IMenuItem[] = [
+  { name: "Home", hash: "#main" },
+  { name: "About", hash: "#about" },
+  { name: "Portfolio", hash: "#portfolio" },
+  { name: "Contact me", hash: "#contact" },
+];
+
+interface IMenuItem {
+  name: string;
+  hash: string;
+}
+
 const Header = (): React.ReactElement => {
   const [isSticky, setSticky] = useState<boolean>(false);
   const divEl = useRef<HTMLDivElement | null>(null);
-  const handleScroll = (): void => {
+  const handleScroll = useCallback((): void => {
     if (divEl.current) {
-      setSticky(divEl.current.getBoundingClientRect().top <= 0);
+      setSticky(window.scrollY > divEl.current.getBoundingClientRect().bottom);
     }
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return (): void => {
-      window.removeEventListener("scroll", () => handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
     <div id="header" className={isSticky ? "is-sticky" : ""} ref={divEl}>
@@ -32,18 +44,20 @@ const Header = (): React.ReactElement => {
 
         <nav id="nav-menu-container">
           <ul className="nav-menu">
-            <li className="menu-active">
-              <a href="#main">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#contact">Contact Me</a>
-            </li>
+            {menu.map((item, index) => (
+              <li
+                key={item.name}
+                className={
+                  !window.location.hash && index === 0
+                    ? "menu-active"
+                    : window.location.hash === item.hash
+                    ? "menu-active"
+                    : ""
+                }
+              >
+                <a href={item.hash}>{item.name}</a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
