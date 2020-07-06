@@ -32,6 +32,7 @@ module.exports = {
     'linebreak-style': 'off',
     'no-nested-ternary': 'off',
     'react/no-array-index-key': 'off',
-    '@typescript-eslint/interface-name-prefix': 'off'
+    '@typescript-eslint/interface-name-prefix': 'off',
+    'import/prefer-default-export': 'off'
   },
 };
