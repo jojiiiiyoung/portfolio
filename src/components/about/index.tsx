@@ -24,31 +24,11 @@ const About = (): React.ReactElement => {
           <div className="section-title-divider" />
           <div className="section-description">
             {COMPANIES.map((company: ICompany, index: number) => (
-              <div
+              <Company
                 key={index}
-                className={`box slide ${
-                  visible ? `delay-${index} slide-up` : "slide-down"
-                }`}
-              >
-                <div className="icon">
-                  <i className="ion-ios-analytics-outline" />
-                </div>
-                <h4 className="title">
-                  <span>{company.name}</span>
-                </h4>
-                <div className="description">
-                  <span className="period">{company.period}</span>
-                  <br />
-
-                  <ul className="skill-list">
-                    {company.skills.map((skill) => (
-                      <li key={skill}>
-                        <Badge text={skill} />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+                data={company}
+                className={visible ? `delay-${index} slide-up` : "slide-down"}
+              />
             ))}
           </div>
         </div>
@@ -93,5 +73,34 @@ const About = (): React.ReactElement => {
     </section>
   );
 };
+
+export const Company = ({
+  data,
+  className,
+}: {
+  data: ICompany;
+  className: string;
+}): React.ReactElement => (
+  <div className={`box slide ${className}`}>
+    <div className="icon">
+      <i className="ion-ios-analytics-outline" />
+    </div>
+    <h4 className="title">
+      <span>{data.name}</span>
+    </h4>
+    <div className="description">
+      <span className="period">{data.period}</span>
+      <br />
+
+      <ul className="skill-list">
+        {data.skills.map((skill) => (
+          <li key={skill}>
+            <Badge text={skill} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+);
 
 export default About;

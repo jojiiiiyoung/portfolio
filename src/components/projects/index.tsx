@@ -36,7 +36,7 @@ const Projects = (): React.ReactElement => {
 
 export default Projects;
 
-const ProjectItem = ({
+export const ProjectItem = ({
   data,
   className,
 }: {
