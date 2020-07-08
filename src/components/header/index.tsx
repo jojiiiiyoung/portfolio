@@ -1,8 +1,15 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  useCallback,
+  useContext,
+} from "react";
 
 import { DEFAULT_LOGO as logo } from "../../constants";
 
 import "./style.css";
+import { AppContext } from "../../context/app";
 
 const menu: IMenuItem[] = [
   { name: "Home", hash: "#main" },
@@ -17,8 +24,10 @@ interface IMenuItem {
 }
 
 const Header = (): React.ReactElement => {
+  const { hash } = useContext(AppContext);
   const [isSticky, setSticky] = useState<boolean>(false);
   const divEl = useRef<HTMLDivElement | null>(null);
+
   const handleScroll = useCallback((): void => {
     if (divEl.current) {
       setSticky(window.scrollY > divEl.current.getBoundingClientRect().bottom);
@@ -45,18 +54,12 @@ const Header = (): React.ReactElement => {
         <nav id="nav-menu-container">
           <ul className="nav-menu">
             {menu.map((item, index) => (
-              <li
+              <MenuItem
                 key={item.name}
-                className={
-                  !window.location.hash && index === 0
-                    ? "menu-active"
-                    : window.location.hash === item.hash
-                    ? "menu-active"
-                    : ""
-                }
-              >
-                <a href={item.hash}>{item.name}</a>
-              </li>
+                name={item.name}
+                hash={item.hash}
+                active={(!hash && index === 0) || hash === item.hash}
+              />
             ))}
           </ul>
         </nav>
@@ -64,5 +67,19 @@ const Header = (): React.ReactElement => {
     </div>
   );
 };
+
+const MenuItem = ({
+  active,
+  hash,
+  name,
+}: {
+  active: boolean;
+  hash: string;
+  name: string;
+}): React.ReactElement => (
+  <li key={name} className={active ? "menu-active" : ""}>
+    <a href={hash}>{name}</a>
+  </li>
+);
 
 export default Header;

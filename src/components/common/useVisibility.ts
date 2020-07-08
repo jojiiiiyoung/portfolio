@@ -11,7 +11,7 @@ const checkVisible = (el: HTMLElement | null): boolean => {
   return top <= innerHeight && bottom >= 0;
 };
 
-const useVisible = (
+const useVisibility = (
   el: MutableRefObject<HTMLDivElement | null>
 ): { visible: boolean } => {
   const [visible, setVisible] = useState<boolean>(false);
@@ -31,4 +31,4 @@ const useVisible = (
   return { visible };
 };
 
-export default useVisible;
+export default useVisibility;

@@ -1,14 +1,19 @@
 import React, { useRef } from "react";
 
-import "./style.css";
-import { IMAGE_URL } from "../../constants";
 import Badge from "../common/badge";
-import useVisible from "../common/useVisible";
+import useVisibility from "../common/useVisibility";
+import useHash from "../common/useHash";
+
+import { IMAGE_URL } from "../../constants";
 import { IProject, PROJECTS } from "./data";
+
+import "./style.css";
 
 const Projects = (): React.ReactElement => {
   const containerEl = useRef<HTMLDivElement | null>(null);
-  const { visible } = useVisible(containerEl);
+  const { visible } = useVisibility(containerEl);
+
+  useHash(visible, "#portfolio");
 
   return (
     <section id="portfolio" ref={containerEl}>

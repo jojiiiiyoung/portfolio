@@ -4,17 +4,20 @@ import React, { useRef } from "react";
 import Badge from "../common/badge";
 
 // hooks
-import useVisible from "../common/useVisible";
+import useVisibility from "../common/useVisibility";
 
 // data
 import { ICompany, COMPANIES } from "./data";
 
 import "./style.css";
+import useHash from "../common/useHash";
 
 const About = (): React.ReactElement => {
   const containerEl = useRef<HTMLDivElement | null>(null);
 
-  const { visible } = useVisible(containerEl);
+  const { visible } = useVisibility(containerEl);
+
+  useHash(visible, "#about");
 
   return (
     <section id="about" ref={containerEl}>
