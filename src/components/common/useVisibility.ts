@@ -1,4 +1,13 @@
-import { useState, useCallback, useEffect, MutableRefObject } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import {
+  useState,
+  useCallback,
+  useEffect,
+  MutableRefObject,
+  useRef,
+} from "react";
+
+const CUSHION = 150;
 
 const checkVisible = (el: HTMLElement | null): boolean => {
   if (!el) {
@@ -8,16 +17,24 @@ const checkVisible = (el: HTMLElement | null): boolean => {
   const { innerHeight } = window;
   const { bottom, top } = el.getBoundingClientRect();
 
-  return top <= innerHeight && bottom >= 0;
+  return top + CUSHION <= innerHeight && bottom >= 0;
 };
+
+const DEFAULT_DELAY = 500;
 
 const useVisibility = (
   el: MutableRefObject<HTMLDivElement | null>
 ): { visible: boolean } => {
   const [visible, setVisible] = useState<boolean>(false);
+  const timer = useRef<any>(null);
 
   const handleScroll = useCallback((): void => {
-    setVisible(checkVisible(el.current));
+    if (!timer.current) {
+      timer.current = setTimeout(() => {
+        setVisible(checkVisible(el.current));
+        timer.current = null;
+      }, DEFAULT_DELAY);
+    }
   }, [el]);
 
   useEffect(() => {
