@@ -1,23 +1,25 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import React from "react";
-import { IMAGE_URL, DEFAULT_LOGO as logo } from "../../constants";
+
+import { IMAGE_URL } from "../../constants";
 
 import "./style.css";
+import Hello from "./hello";
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const RotatingText = require("react-rotating-text");
 
 const Main = (): React.ReactElement => {
   return (
     <section
       id="main"
-      style={{ backgroundImage: `url(${IMAGE_URL}home-bg.jpg)` }}
+      style={{
+        backgroundImage: `url(${IMAGE_URL}home-bg.jpg)`,
+      }}
     >
       <div className="main-container container">
         <div className="wow fadeIn">
           <div className="main-logo">
-            <img className="" src={logo} alt="smile :)" />
-            <img className="" src={logo} alt="smile :)" />
-            <img className="" src={logo} alt="smile :)" />
+            <Hello />
           </div>
 
           <h1>Hello, my name is Jiyoung</h1>
@@ -39,11 +41,11 @@ const Main = (): React.ReactElement => {
       </div>
       <span className="bg-source">
         Photo by{" "}
-        <a href="https://unsplash.com/@11x11?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-          Enzo Tommasi
+        <a href="https://unsplash.com/@joannakosinska?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+          Joanna Kosinska
         </a>{" "}
         on{" "}
-        <a href="/s/photos/computer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+        <a href="https://unsplash.com/s/photos/simple-background?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
           Unsplash
         </a>
       </span>

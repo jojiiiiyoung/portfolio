@@ -3,28 +3,22 @@
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: bottom center;
-}
-
-@media (min-width: 1024px) {
-  #main {
-    background-attachment: fixed;
-  }
+  background-position: top center;
 }
 
 #main .main-logo {
-  margin: 20px;
+  margin: auto;
 }
 
-#main .main-logo img {
-  max-width: 5%;
+#main .main-logo > div {
+  margin: auto;
 }
 
 #main .main-container {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   display: table-cell;
   margin: 0;
-  padding: 0;
+  padding: 2rem;
   text-align: center;
   vertical-align: middle;
 }
