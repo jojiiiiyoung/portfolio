@@ -16,6 +16,10 @@ code {
     monospace;
 }
 
+.app > section {
+  position: relative;
+}
+
 .container {
   position: relative;
 }
