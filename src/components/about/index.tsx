@@ -39,11 +39,19 @@ const About = (): React.ReactElement => {
         <div className="about-container">
           <span className="bg-source">
             Photo by{" "}
-            <a href="https://unsplash.com/@ewan121?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://unsplash.com/@ewan121?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+            >
               Ewan Robertson
             </a>{" "}
             on{" "}
-            <a href="https://unsplash.com/s/photos/yak-shaver?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://unsplash.com/s/photos/yak-shaver?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+            >
               Unsplash
             </a>
           </span>

@@ -41,11 +41,19 @@ const Main = (): React.ReactElement => {
       </div>
       <span className="bg-source">
         Photo by{" "}
-        <a href="https://unsplash.com/@joannakosinska?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://unsplash.com/@joannakosinska?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >
           Joanna Kosinska
         </a>{" "}
         on{" "}
-        <a href="https://unsplash.com/s/photos/simple-background?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://unsplash.com/s/photos/simple-background?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >
           Unsplash
         </a>
       </span>

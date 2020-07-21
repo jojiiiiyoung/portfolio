@@ -52,11 +52,19 @@ const Contact = (): React.ReactElement => {
       </div>
       <span className="bg-source">
         Photo by{" "}
-        <a href="https://unsplash.com/@lucasgwendt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://unsplash.com/@lucasgwendt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >
           Lucas George Wendt
         </a>{" "}
         on{" "}
-        <a href="https://unsplash.com/s/photos/letter?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://unsplash.com/s/photos/letter?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >
           Unsplash
         </a>
       </span>
