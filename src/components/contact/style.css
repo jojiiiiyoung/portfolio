@@ -1,7 +1,9 @@
 #contact {
-  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)),
-    url(./call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(158, 134, 0, 0.3), rgba(0, 0, 0, 0.6)),
+    url(./bg.jpg) fixed top center;
   background-size: cover;
+}
+#contact .container {
   text-align: center;
 }
 
