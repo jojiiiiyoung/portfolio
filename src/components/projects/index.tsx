@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import Badge from "../common/badge";
 import useVisibility from "../common/useVisibility";
@@ -10,8 +10,7 @@ import { IProject, PROJECTS } from "./data";
 import "./style.css";
 
 const Projects = (): React.ReactElement => {
-  const containerEl = useRef<HTMLDivElement | null>(null);
-  const { visible } = useVisibility(containerEl);
+  const { el: containerEl, visible } = useVisibility();
 
   useHash(visible, "#portfolio");
 

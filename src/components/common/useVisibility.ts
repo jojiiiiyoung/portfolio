@@ -3,49 +3,44 @@ import {
   useState,
   useCallback,
   useEffect,
-  MutableRefObject,
   useRef,
+  MutableRefObject,
 } from "react";
 
-const CUSHION = 150;
+if (typeof IntersectionObserver === "undefined") {
+  import("intersection-observer");
+}
 
-const checkVisible = (el: HTMLElement | null): boolean => {
-  if (!el) {
-    return false;
-  }
-
-  const { innerHeight } = window;
-  const { bottom, top } = el.getBoundingClientRect();
-
-  return top + CUSHION <= innerHeight && bottom >= 0;
-};
-
-const DEFAULT_DELAY = 500;
-
-const useVisibility = (
-  el: MutableRefObject<HTMLDivElement | null>
-): { visible: boolean } => {
+const useVisibility = (): {
+  visible: boolean;
+  el: MutableRefObject<HTMLDivElement | null>;
+} => {
+  const el = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState<boolean>(false);
-  const timer = useRef<any>(null);
 
-  const handleScroll = useCallback((): void => {
-    if (!timer.current) {
-      timer.current = setTimeout(() => {
-        setVisible(checkVisible(el.current));
-        timer.current = null;
-      }, DEFAULT_DELAY);
+  const handleScroll = useCallback(([entry]) => {
+    if (entry.isIntersecting) {
+      setVisible(true);
+    } else {
+      setVisible(false);
     }
-  }, [el]);
+  }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    let observer: IntersectionObserver;
+    const { current } = el;
 
-    return (): void => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    if (current) {
+      observer = new IntersectionObserver(handleScroll, { threshold: 0.1 });
+      observer.observe(current);
+
+      return (): void => observer && observer.disconnect();
+    }
+
+    return (): void => {};
   }, [handleScroll, el]);
 
-  return { visible };
+  return { el, visible };
 };
 
 export default useVisibility;

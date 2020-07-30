@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Lottie } from "@crello/react-lottie";
 
 import useHash from "../common/useHash";
@@ -9,8 +9,7 @@ import mail from "./email.json";
 import "./style.css";
 
 const Contact = (): React.ReactElement => {
-  const containerEl = useRef<HTMLDivElement | null>(null);
-  const { visible } = useVisibility(containerEl);
+  const { el: containerEl, visible } = useVisibility();
 
   useHash(visible, "#contact");
 
