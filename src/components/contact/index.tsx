@@ -1,5 +1,5 @@
 import React from "react";
-import { Lottie } from "@crello/react-lottie";
+import Lottie from "react-lottie";
 
 import useHash from "../common/useHash";
 import useVisibility from "../common/useVisibility";
@@ -25,7 +25,7 @@ const Contact = (): React.ReactElement => {
             href="https://www.linkedin.com/in/jiyoung-jo-17b882b1"
           >
             <Lottie
-              config={{
+              options={{
                 loop: true,
                 autoplay: true,
                 animationData: linkedIn,
@@ -37,7 +37,7 @@ const Contact = (): React.ReactElement => {
           </a>
           <a className="contact-link" href="mailto:jojiiiiyoung@gmail.com">
             <Lottie
-              config={{
+              options={{
                 loop: true,
                 autoplay: true,
                 animationData: mail,

@@ -1,10 +1,10 @@
 import React from "react";
-import { Lottie } from "@crello/react-lottie";
+import Lottie from "react-lottie";
 import animationData from "./hello.json";
 
 const Hello = (): React.ReactElement => (
   <Lottie
-    config={{
+    options={{
       loop: true,
       autoplay: true,
       animationData,
