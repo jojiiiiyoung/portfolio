@@ -11,6 +11,16 @@ export interface IProject {
 
 export const PROJECTS: IProject[] = [
   {
+    name: "V 컬러링",
+    img: { src: "project-vcoloring.mp4" },
+    descriptions: [
+      "동영상 컬러링 앱 개발",
+      "하이브리드 앱 개발",
+      "성능 최적화",
+    ],
+    keywords: ["react", "typescript", "redux"],
+  },
+  {
     name: "건물관리 시스템",
     img: { src: "project-capstec.png" },
     descriptions: [

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import React from "react";
 
 import Badge from "../common/badge";
@@ -48,7 +49,18 @@ export const ProjectItem = ({
   className: string;
 }): React.ReactElement => (
   <li className={`card portfolio-item ${className}`}>
-    <img className="card-img" src={IMAGE_URL + data.img.src} alt="" />
+    {data.img.src.includes("mp4") ? (
+      <video
+        className="card-img"
+        src={IMAGE_URL + data.img.src}
+        autoPlay
+        muted
+        playsInline
+        loop
+      />
+    ) : (
+      <img className="card-img" src={IMAGE_URL + data.img.src} alt="" />
+    )}
     <div className="card-body">
       <h5>{data.name}</h5>
       <p className="description">
