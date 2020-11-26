@@ -7,6 +7,7 @@ import useVisibility from "../common/useVisibility";
 import linkedIn from "./linkedin.json";
 import mail from "./email.json";
 import "./style.css";
+import { FBEventTypes } from "../../utils/fbHelper";
 
 const Contact = (): React.ReactElement => {
   const { el: containerEl, visible } = useVisibility();
@@ -23,6 +24,8 @@ const Contact = (): React.ReactElement => {
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/jiyoung-jo-17b882b1"
+            data-fb-event={FBEventTypes.CONTACTS}
+            data-fb-params={JSON.stringify({ item_name: "linked-in" })}
           >
             <Lottie
               options={{
@@ -35,7 +38,12 @@ const Contact = (): React.ReactElement => {
             />
             {/* <img src={`${IMAGE_URL}linked-in.png`} alt="linked in" /> */}
           </a>
-          <a className="contact-link" href="mailto:jojiiiiyoung@gmail.com">
+          <a
+            className="contact-link"
+            href="mailto:jojiiiiyoung@gmail.com"
+            data-fb-event={FBEventTypes.CONTACTS}
+            data-fb-params={JSON.stringify({ item_name: "mail" })}
+          >
             <Lottie
               options={{
                 loop: true,

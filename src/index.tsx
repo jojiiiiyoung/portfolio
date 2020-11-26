@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
 import * as serviceWorker from "./serviceWorker";
+import FBHelper from "./utils/fbHelper";
 
+FBHelper.init();
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -7,7 +7,7 @@ module.exports = {
     'prettier',
     'prettier/react',
     'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   plugins: ['react', '@typescript-eslint', 'jest'],
   env: {
@@ -33,6 +33,8 @@ module.exports = {
     'no-nested-ternary': 'off',
     'react/no-array-index-key': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
-    'import/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 };
