@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --dark-navy: #0a192f;
+  --navy: #112240;
+  --light-navy: #233554;
+  --lightest-navy: #303C55;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --green-tint: rgba(100, 255, 218, 0.1);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  --fs-xxs: 12px;
+  --fs-xs: 13px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 20px;
+  --fs-xxl: 22px;
+  --fs-heading: 32px;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --nav-height: 0px;
+  --tab-height: 42px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  line-height: 1.7;
+  color: var(--slate);
+  background-color: var(--dark-navy);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a { color: var(--green); text-decoration: none; transition: var(--transition); }
+a:hover { color: var(--green); }
+
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: 600; color: var(--lightest-slate); }
+p { margin: 0 0 15px; }
+img, video { display: block; max-width: 100%; }
+
+::selection { background: rgba(100, 255, 218, 0.15); color: var(--lightest-slate); }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--dark-navy); }
+::-webkit-scrollbar-thumb { background: var(--lightest-navy); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--slate); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "companies": [
+    {
+      "company": "카카오엔터테인먼트",
+      "title": "Frontend Developer / Lead",
+      "period": "2021.10 — Present",
+      "descriptions": [
+        "베리즈(Berriz) 커뮤니티 FE 개발 리딩 — Next.js 기반 SSR + RSC 혼합 렌더링 구조 설계, Hybrid App 인터페이스 설계",
+        "라이브 동영상 플레이어 코어 및 채팅 SDK 설계·개발, WebSocket 기반 실시간 메시징 최적화",
+        "카카오페이지 Stage SSR→SSG 전환으로 비용 절감, 이미지 최적화로 LCP 1.11s → 386ms 개선",
+        "Turborepo + pnpm 기반 Monorepo 전환 주도, Sentry 기반 실시간 에러 모니터링 도입",
+        "10만 TPS 목표 트래픽 대응을 위한 k8s 클러스터 튜닝(HPA, Node Pool 최적화)"
+      ],
+      "skills": [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "React Query",
+        "Zustand",
+        "Turborepo",
+        "k8s",
+        "Cypress"
+      ]
+    },
+    {
+      "company": "웍스모바일",
+      "title": "Frontend Developer / Lead",
+      "period": "2021.03 — 2021.10",
+      "descriptions": [
+        "네이버·라인웍스 메일 FE 개편 리딩 — 검색 기능 전면 개편, 레거시 코드 → React 전환",
+        "메일 HTML 에디터 개발 — 히스토리, 커스텀 플러그인, Table 기능 고도화",
+        "Jest 기반 테스트 도입 및 SonarQube 기반 코드 품질 관리"
+      ],
+      "skills": [
+        "TypeScript",
+        "React",
+        "JavaScript",
+        "Jest"
+      ]
+    },
+    {
+      "company": "SK플래닛",
+      "title": "Frontend Developer / Lead",
+      "period": "2018.06 — 2021.03",
+      "descriptions": [
+        "V 컬러링 모바일 웹·하이브리드 앱 FE 리딩 — React + Redux + RxJS 기반 개발",
+        "Hybrid App 인터페이스 설계 및 숏폼 동영상 플레이어 개발",
+        "모바일 Tworld 하이브리드 앱 개발 — Node.js + Gulp 기반 FE 빌드 환경 구성",
+        "MAU 667만 이상 서비스 안정 운영, RxJS 기반 비동기 처리 체계 확립"
+      ],
+      "skills": [
+        "React",
+        "Redux",
+        "RxJS",
+        "TypeScript",
+        "Node.js",
+        "Webpack"
+      ]
+    },
+    {
+      "company": "(주) 빙글",
+      "title": "Frontend Developer",
+      "period": "2018.01 — 2018.06",
+      "descriptions": [
+        "관심사 기반 SNS vingle.net Frontend 개발(SPA)",
+        "Routing 모듈 개선 및 normalizer 도입을 통한 성능 최적화",
+        "Storybook 도입을 통한 컴포넌트 단위 UI 테스팅 체계 구축"
+      ],
+      "skills": [
+        "React",
+        "Redux",
+        "TypeScript",
+        "Node.js",
+        "Jest"
+      ]
+    },
+    {
+      "company": "티맥스 오에스",
+      "title": "UI Platform Developer",
+      "period": "2015.02 — 2017.11",
+      "descriptions": [
+        "Web Components 기반 UI Framework 설계·개발, Custom UI element lifecycle 모델 구현",
+        "알고리즘 개선을 통해 페이징 속도 6배 이상 향상",
+        "다중 플랫폼 지원 클라이언트 애플리케이션 개발 프레임워크 한국·미국 특허 출원"
+      ],
+      "skills": [
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "jQuery",
+        "Polymer",
+        "Web Components"
+      ]
+    }
+  ]
+}

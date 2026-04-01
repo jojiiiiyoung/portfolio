@@ -1,0 +1,70 @@
+{
+  "featured": [
+    {
+      "title": "베리즈 (Berriz)",
+      "description": "카카오엔터테인먼트의 글로벌 K컬처 팬 플랫폼 FE 리딩. Next.js 기반 SSR + RSC 혼합 렌더링 구조 설계, Hybrid App 인터페이스 설계, 서버 사이드 캐싱 전략 구축. 220개국 서비스, 10만 TPS 목표 트래픽 대응.",
+      "image": "/images/project-berriz-promo.png",
+      "mediaType": "image",
+      "skills": ["Next.js", "TypeScript", "React Query", "Zustand", "Turborepo", "k8s"],
+      "links": {}
+    },
+    {
+      "title": "V 컬러링",
+      "description": "SKT 동영상 컬러링 하이브리드 앱 FE 리딩. React + Redux + RxJS 기반 개발, Hybrid App 인터페이스 설계, 숏폼 동영상 플레이어 개발. MAU 667만 이상 서비스 안정 운영.",
+      "image": "/images/project-vcoloring.mp4",
+      "mediaType": "video",
+      "skills": ["React", "Redux", "RxJS", "TypeScript", "Webpack"],
+      "links": {}
+    },
+    {
+      "title": "대기질 모니터링",
+      "description": "IoT 기반 대기질 모니터링 시스템 FE 개발 리딩. 실시간 데이터 시각화 및 모니터링 대시보드 구축.",
+      "image": "/images/project-air.png",
+      "mediaType": "image",
+      "skills": ["React", "Redux", "Dygraph", "Webpack"],
+      "links": {}
+    }
+  ],
+  "other": [
+    {
+      "title": "라이브 동영상 플레이어",
+      "description": "웹 플레이어 코어 및 채팅 SDK 설계·개발. WebSocket 기반 실시간 메시징 및 QoS 최적화.",
+      "skills": ["TypeScript", "React", "WebSocket", "Jest", "Cypress"]
+    },
+    {
+      "title": "카카오페이지 Stage",
+      "description": "SSR→SSG 전환으로 대규모 비용 절감. 이미지 로딩 최적화로 LCP 1.11s → 386ms 개선. Docker 기반 AWS ECS 배포 파이프라인 구축.",
+      "skills": ["Next.js", "Docker", "AWS ECS", "Jest", "Cypress"]
+    },
+    {
+      "title": "멜론 스토어",
+      "description": "멜론 스토어 Frontend 개발. 카카오엔터테인먼트의 음악 커머스 플랫폼.",
+      "skills": ["Next.js", "TypeScript", "React"]
+    },
+    {
+      "title": "네이버·라인웍스 메일",
+      "description": "메일 FE 개편 리딩. 검색 기능 전면 개편, 레거시 코드 → React 전환, IE11 대응 및 웹 호환성 확보.",
+      "skills": ["TypeScript", "React", "JavaScript"]
+    },
+    {
+      "title": "메일 HTML 에디터",
+      "description": "히스토리, 커스텀 플러그인, Table 기능 고도화. Jest 기반 테스트 도입, SonarQube 기반 코드 품질 관리.",
+      "skills": ["JavaScript", "Jest", "SonarQube"]
+    },
+    {
+      "title": "T world",
+      "description": "SKT 통합서비스 모바일 하이브리드 앱 개발. Node.js + Gulp 기반 FE 빌드 환경 구성, 배너·팝업 등 공통 모듈 개발.",
+      "skills": ["Node.js", "TypeScript", "Gulp", "jQuery", "Handlebars"]
+    },
+    {
+      "title": "Vingle SNS",
+      "description": "관심사 기반 SNS Frontend 개발(SPA). Routing 모듈 개선, normalizer 도입을 통한 성능 최적화, Storybook 도입.",
+      "skills": ["React", "Redux", "TypeScript", "Node.js", "Jest"]
+    },
+    {
+      "title": "Frontend Framework",
+      "description": "Web Components 기반 UI Framework 설계·개발. 알고리즘 개선으로 페이징 속도 6배 이상 향상. 한국·미국 특허 출원.",
+      "skills": ["JavaScript", "Web Components", "Polymer", "HTML5", "CSS"]
+    }
+  ]
+}
